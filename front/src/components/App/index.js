@@ -10,10 +10,15 @@ import Animation from '../Animation';
 // == Composant
 const App = () => {
   const [animFinished, setAnimFinished] = useState(false);
+  const [firstAnimationFinished, setFirstAnimationFinished] = useState(false);
 
   // useEffect(() => {
   //   <Animation />;
   // });
+
+  const handelFirstAnim = () => {
+    setFirstAnimationFinished(!firstAnimationFinished);
+  };
 
   return (
     <div className="app">
@@ -24,7 +29,7 @@ const App = () => {
            <FirstPage />
          </>
        ) : (
-         <Animation />
+         <Animation firstAnimationFinished={firstAnimationFinished} handelFirstAnim={handelFirstAnim} />
        )
       }
     </div>
