@@ -1,17 +1,37 @@
 // == Import npm
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // == Import
-import reactLogo from './react-logo.svg';
-import './styles.css';
+import './style.scss';
+import Header from '../Header';
+import FirstPage from '../FirstPage';
+import Animation from '../Animation';
 
 // == Composant
-const App = () => (
-  <div className="app">
-    <img src={reactLogo} alt="react logo" />
-    <h1>Composant : App</h1>
-  </div>
-);
+const App = () => {
+  const [animFinished, setAnimFinished] = useState(false);
+
+  // useEffect(() => {
+  //   <Animation />;
+  // });
+
+  return (
+    <div className="app">
+      {
+       animFinished ? (
+         <>
+           <Header />
+           <FirstPage />
+         </>
+       ) : (
+         <Animation />
+       )
+      }
+    </div>
+  );
+};
 
 // == Export
 export default App;
+
+// {/* <img alt="" src={clavier} /> */}

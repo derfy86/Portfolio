@@ -1,0 +1,23 @@
+.first-page {
+  padding-top: 6rem;
+  margin: auto;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.274)),url("/src/assets/dev.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  &__name {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 6em;
+    width: fit-content;
+  }
+  &__text {
+    width: fit-content;
+    margin: 2.5rem;
+    font-size: 2em;
+  }
+}

@@ -1,0 +1,69 @@
+.animation {
+  background-color: black;
+  color: white;
+  height: 100vh
+}
+
+.animation-text {
+  color: white;
+  font-size: 500px;
+  position: absolute;
+  top: 200px;
+  left: 2000px;
+  height: 100px;
+  z-index: 1;
+  width: 100%;
+  white-space: nowrap;
+  animation: text-mooved 8s ease-in-out 1 alternate;
+}
+
+@keyframes text-mooved {
+  0% {
+
+  } 
+  35% {
+    left: -5000px;
+  }
+  100% {
+    font-size: 1000px;
+    left: 2000px;
+    top: 200px;
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 50px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6, 0 0 100px #ff4da6;
+  }
+}
+
+.top-block {
+  position: fixed;
+  background-color: #333;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  animation: top-block-expand 2s ease-in-out 1 forwards;
+}
+
+@keyframes top-block-expand {
+  from {
+    height: 0;
+  } to {
+    height: 20vh;
+  }
+}
+
+.bottom-block {
+  position: fixed;
+  background-color: #333;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  animation: bottom-block-expand 2s ease-in-out 1 forwards;
+}
+
+@keyframes bottom-block-expand {
+  from {
+    height: 0;
+  } to {
+    height: 20vh;
+  }
+}
