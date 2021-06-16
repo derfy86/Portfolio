@@ -12,12 +12,9 @@ const App = () => {
   const [animFinished, setAnimFinished] = useState(false);
   const [firstAnimationFinished, setFirstAnimationFinished] = useState(false);
 
-  // useEffect(() => {
-  //   <Animation />;
-  // });
-
-  const handelFirstAnim = () => {
-    setFirstAnimationFinished(!firstAnimationFinished);
+  const handelFirstAnim = (videoRef) => {
+    setFirstAnimationFinished(true);
+    videoRef.current.play();
   };
 
   return (
@@ -29,7 +26,10 @@ const App = () => {
            <FirstPage />
          </>
        ) : (
-         <Animation firstAnimationFinished={firstAnimationFinished} handelFirstAnim={handelFirstAnim} />
+         <Animation
+           firstAnimationFinished={firstAnimationFinished}
+           handelFirstAnim={handelFirstAnim}
+         />
        )
       }
     </div>

@@ -1,20 +1,53 @@
 .animation {
   background-color: black;
   color: white;
-  height: 100vh
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+.animation-text-finished {
+  color: white;
+  font-size: 400px;
+  position: absolute;
+  padding-top: 15rem;
+  height: 100vh;
+  z-index: 1;
+  width: 100%;
+  opacity: 0;
+  white-space: nowrap;
+  animation:last-anim 5s ease-in-out 1 alternate;
+}
+
+@keyframes last-anim {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 50px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6, 0 0 100px #ff4da6, 0 0 120px #ff4da6;
+  } 
+  10% {   
+     opacity: 1;
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 50px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6, 0 0 100px #ff4da6, 0 0 120px #ff4da6;
+  } 
+  45% {
+    background-color: #f82500;
+  }
+  100% {
+    font-size: 250px;
+  }
 }
 
 .animation-text {
   color: white;
   font-size: 500px;
   position: absolute;
-  top: 200px;
-  left: 2000px;
+  top: 0;
+  left: 4000px;
   height: 100px;
-  z-index: 1;
+  z-index: 3;
   width: 100%;
   white-space: nowrap;
-  animation: text-mooved 8s ease-in-out 1 alternate;
+  text-overflow: clip;
+  animation: text-mooved 6s ease-in-out 1 alternate;
 }
 
 @keyframes text-mooved {
@@ -22,13 +55,16 @@
 
   } 
   35% {
-    left: -5000px;
+    left: -4000px;
+  }
+  60% {
+    top: 200px;
   }
   100% {
-    font-size: 1000px;
-    left: 2000px;
+    font-size: 1400px;
     top: 200px;
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 50px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6, 0 0 100px #ff4da6;
+    left: 4000px;
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 50px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6, 0 0 100px #ff4da6, 0 0 120px #ff4da6;
   }
 }
 
@@ -50,6 +86,24 @@
   }
 }
 
+.top-block-closed {
+  position: fixed;
+  background-color: #333;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  animation: top-block-closed 2s ease-in-out 1 forwards;
+}
+
+@keyframes top-block-closed {
+  from {
+    height: 20vh;
+  } to {
+    height: 0;
+  }
+}
+
 .bottom-block {
   position: fixed;
   background-color: #333;
@@ -65,5 +119,23 @@
     height: 0;
   } to {
     height: 20vh;
+  }
+}
+
+.bottom-block-closed {
+  position: fixed;
+  background-color: #333;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  animation: bottom-block-closed 2s ease-in-out 1 forwards;
+}
+
+@keyframes bottom-block-closed {
+  from {
+    height: 20vh;
+  } to {
+    height: 0;
   }
 }
