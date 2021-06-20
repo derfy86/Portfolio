@@ -3,13 +3,13 @@ import React, { useState, useEffect } from 'react';
 
 // == Import
 import './style.scss';
-import Header from '../Header';
-import FirstPage from '../FirstPage';
 import Animation from '../Animation';
+import Page from '../Page';
 
 // == Composant
 const App = () => {
-  const [animFinished, setAnimFinished] = useState(false);
+  // init this state at false to see the animation
+  const [animFinished, setAnimFinished] = useState(true);
   const [firstAnimationFinished, setFirstAnimationFinished] = useState(false);
 
   const handelFirstAnim = (videoRef) => {
@@ -22,8 +22,7 @@ const App = () => {
       {
        animFinished ? (
          <>
-           <Header />
-           <FirstPage />
+           <Page />
          </>
        ) : (
          <Animation

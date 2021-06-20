@@ -1,5 +1,6 @@
 // == Import npm
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 // == Import
 import './style.scss';
@@ -7,12 +8,20 @@ import './style.scss';
 // == Composant
 const Header = () => (
   <nav className="header">
-    <button type="button" className="button pseudo">DERFY</button>
+    <Link to="/" className="button pseudo">DERFY</Link>
     <ul className="header__text">
-      <li className="header__text--detail">A propos</li>
-      <li className="header__text--detail">Compétences</li>
-      <li className="header__text--detail">Projet</li>
-      <li className="header__text--detail">Contact</li>
+      <NavLink to="/about" className="header__text--detail" activeClassName=" active">
+        A propos
+      </NavLink>
+      <NavLink to="/skills" className="header__text--detail" activeClassName=" active">
+        Compétences
+      </NavLink>
+      <NavLink to="/project" className="header__text--detail" activeClassName=" active">
+        Projet
+      </NavLink>
+      <NavLink to="/contact" className="header__text--detail" activeClassName=" active">
+        Contact
+      </NavLink>
     </ul>
   </nav>
 );
