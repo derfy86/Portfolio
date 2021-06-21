@@ -1,7 +1,7 @@
 @import 'src/styles/vars';
 
 .first-page {
-  padding-top: 7rem;
+  padding-top: 6rem;
   margin: auto;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.274)),url("/src/assets/dev.jpg");
@@ -14,7 +14,7 @@
   &__name {
     margin-left: 2rem;
     margin-bottom: 1.5rem;
-    font-size: 6em;
+    font-size: 5em;
     width: fit-content;
   }
 
@@ -29,7 +29,7 @@
   display: flex;
   width:100%;
   padding-left: 4rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
   
   &__detail {
     width: 130px;
@@ -50,7 +50,7 @@
 
 .animate {
 opacity: 1;
-animation: smooth-transition 2s ease-in-out 1 alternate;
+animation: smooth-transition 2s ease-in-out ;
 }
 
 

@@ -2,59 +2,71 @@
 
 .about {
   padding-top: 6rem;
-  height: 100vh;
-  background-color: rgb(66, 18, 60);
-  &__text {
-    margin: auto;
-    width: 75%;
+  min-height: 100vh;
+  background-color: rgb(97, 7, 85);
 
-    &__detail {
-      margin-bottom: 1rem;
-    }
-  }
-
-  &__members {
+  &__member {
     display: flex;
-    justify-content: space-evenly;
-    align-items: stretch;
-    padding-bottom: 2rem;
-    margin-bottom: 4rem;
+    padding: 4rem 6rem;
+  
+    &__myself {
 
-    &__team {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 250px;
-      padding: 20px 10px;
-      flex-direction: column;
-      justify-content: flex-start;
-      border-radius: 2rem;
-      text-align: center;
-      margin: 2rem 0;
+      &__title {
+        color: white;
+        width: 100%;
+        font-size: 1.6em;
+        margin: 3rem 2rem 1rem 3rem;
+        font-weight: bold;
+      }
 
-      &__name {
-        color: #32c8ff;
-        margin: 1rem;
-        font-weight: bolder;
+      &__text {
+        color: white;
+        width: 100%;
+        font-size: 1.2em;
+        padding: 1rem 5rem 2rem 1rem;
+        line-height: 2rem;
       }
 
       &__img {
         background: #fff;
-        max-width: 400px;
-        min-width: 400px;
-        height: 400px;
-        margin: 0 auto;
-        margin-bottom: 1rem;
+        max-width: 500px;
+        min-width: 500px;
+        height: 500px;
         border-radius: 50%;
         padding: 5px;
-        position: relative;
-      }
-
-      &__profil {
-        margin: 0.6rem;
-        color: #566970;
       }
     }
   }
 
+}
+
+.container--left {
+  width: 50%;
+}
+
+.container--right {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.container--logo {
+  display: flex;
+  justify-content:center;
+}
+
+.button--about {
+  transition-duration: 1s;
+  color: white;
+  margin: 0 2rem;
+  &:hover {
+    color: #ffa600;
+  }
+}
+
+.logo--about {
+  background-color: white;
+  width: 60px;
+  border-radius: 50%;
+  padding: 0.2rem;
 }

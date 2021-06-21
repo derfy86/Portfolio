@@ -3,14 +3,13 @@ import React, { useEffect, useState } from 'react';
 
 // == Import
 import './style.scss';
-import Typical from 'react-typical';
+
 import node from '../../assets/node.jpg';
 import js from '../../assets/js.png';
 import react from '../../assets/react.svg';
 
 // == Composant
 const FirstPage = () => {
-  const steps = [1500, 'FREDERIC BOURIGEAUD'];
   const [firstTextTime, setfirstTextTime] = useState(false);
   const [secondTextTime, setSecondTextTime] = useState(false);
   const [logoTime, setLogoTime] = useState(false);
@@ -24,17 +23,11 @@ const FirstPage = () => {
     }, 2300);
     setTimeout(() => {
       setLogoTime(!logoTime);
-    }, 3600);
+    }, 3700);
   }, []);
 
   return (
     <div className="first-page">
-      {/* <Typical
-        steps={steps}
-      // loop={Infinity}
-        className="first-page__name typical"
-        wrapper="p"
-      /> */}
       {
         firstTextTime && (
           <>
