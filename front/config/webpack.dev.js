@@ -29,6 +29,17 @@ module.exports = merge(common, {
         //   attributes: ['video:src'],
         // },
       },
+      {
+        test: /\.(pdf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            },
+          },
+        ],
+      },
       // Styles
       {
         test: /\.(s?css)$/,

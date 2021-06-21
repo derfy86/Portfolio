@@ -7,7 +7,7 @@
 
   &__member {
     display: flex;
-    padding: 4rem 6rem;
+    padding: 3.5rem 6rem;
   
     &__myself {
 
@@ -42,6 +42,9 @@
 
 .container--left {
   width: 50%;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
 }
 
 .container--right {
@@ -53,6 +56,7 @@
 .container--logo {
   display: flex;
   justify-content:center;
+  padding-right: 3rem;
 }
 
 .button--about {
@@ -66,7 +70,7 @@
 
 .logo--about {
   background-color: white;
-  width: 60px;
+  width: 80px;
   border-radius: 50%;
   padding: 0.2rem;
 }

@@ -17,13 +17,13 @@ const FirstPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setfirstTextTime(!firstTextTime);
-    }, 1000);
+    }, 500);
     setTimeout(() => {
       setSecondTextTime(!secondTextTime);
-    }, 2300);
+    }, 1500);
     setTimeout(() => {
       setLogoTime(!logoTime);
-    }, 3700);
+    }, 2600);
   }, []);
 
   return (
