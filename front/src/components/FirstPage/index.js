@@ -20,10 +20,10 @@ const FirstPage = () => {
     }, 500);
     setTimeout(() => {
       setSecondTextTime(!secondTextTime);
-    }, 1500);
+    }, 1200);
     setTimeout(() => {
       setLogoTime(!logoTime);
-    }, 2600);
+    }, 1900);
   }, []);
 
   return (

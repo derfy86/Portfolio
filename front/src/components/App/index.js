@@ -11,6 +11,25 @@ const App = () => {
   // init this state at false to see the animation
   const [animFinished, setAnimFinished] = useState(true);
   const [firstAnimationFinished, setFirstAnimationFinished] = useState(false);
+  const [inputNameClient, setInputNameClient] = useState('');
+  const [inputEmailClient, setInputEmailClient] = useState('');
+  const [inputMessageClient, setInputMessageClient] = useState('');
+
+  const textInputNameClient = (textClient) => {
+    setInputNameClient(textClient);
+  };
+  const textInputEmailClient = (textClient) => {
+    setInputEmailClient(textClient);
+  };
+  const textInputMessageClient = (textClient) => {
+    setInputMessageClient(textClient);
+  };
+
+  const onChangeSubmit = () => {
+    setInputNameClient('');
+    setInputEmailClient('');
+    setInputMessageClient('');
+  };
 
   const handelFirstAnim = (videoRef) => {
     setFirstAnimationFinished(true);
@@ -22,7 +41,15 @@ const App = () => {
       {
        animFinished ? (
          <>
-           <Page />
+           <Page
+             inputNameClient={inputNameClient}
+             textInputNameClient={textInputNameClient}
+             inputEmailClient={inputEmailClient}
+             textInputEmailClient={textInputEmailClient}
+             inputMessageClient={inputMessageClient}
+             textInputMessageClient={textInputMessageClient}
+             onChangeSubmit={onChangeSubmit}
+           />
          </>
        ) : (
          <Animation

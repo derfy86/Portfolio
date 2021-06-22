@@ -1,7 +1,38 @@
 @import 'src/styles/vars';
 
 .contact {
-  padding-top: 6rem;
-  height: 100vh;
-  background-color: rgb(136, 199, 36);
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+
+  &__title {
+    width: 100%;
+    font-size: 1.6em;
+    font-weight: bold;
+  }
+
+  &__input {
+    word-break: break-word;
+  }
+}
+
+.container__contact--left {
+  padding-top: 4.3rem;
+  width: 50%;
+
+  &__img {
+    width: 100%;
+    transform: scaleX(-1);
+   
+  }
+}
+
+.container__contact--right {
+  background-color: rgb(97, 7, 85);
+  margin: 6rem 2rem 4rem 2rem;
+  padding: 4rem;
+  width: 40%;
+  border-radius: 50px;
 }

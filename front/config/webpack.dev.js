@@ -23,11 +23,16 @@ module.exports = merge(common, {
         ],
       },
       {
+        test: /\.(js|jsx)$/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ],
+      },
+      {
         test: /\.html$/i,
         loader: 'html-loader',
-        // options: {
-        //   attributes: ['video:src'],
-        // },
       },
       {
         test: /\.(pdf)$/,

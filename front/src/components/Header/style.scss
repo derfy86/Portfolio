@@ -11,6 +11,7 @@
   justify-content: space-between;
   border-bottom: solid rgba(182, 182, 182, 0.774) 1px;
   transition-duration: 1s;
+  z-index: 5;
   &:hover {
     background-color:rgba(0, 0, 0, 0.9);
     border-bottom: solid #ffa600d3 1px;

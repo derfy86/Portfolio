@@ -3,5 +3,18 @@
 
 body {
   font-family: $font-text;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  background-color:black;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  }
+
+html,
+body,
+#root {
+  height: 100%;
 }
 
