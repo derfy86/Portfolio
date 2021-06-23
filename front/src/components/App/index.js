@@ -14,6 +14,12 @@ const App = () => {
   const [inputNameClient, setInputNameClient] = useState('');
   const [inputEmailClient, setInputEmailClient] = useState('');
   const [inputMessageClient, setInputMessageClient] = useState('');
+  const [user, setUser] = useState({ name: '', email: '', message: '' });
+
+  const changeDataUser = (text, value) => {
+    setUser({ ...user, [value]: text });
+    console.log('infos', user);
+  };
 
   const textInputNameClient = (textClient) => {
     setInputNameClient(textClient);
@@ -26,6 +32,18 @@ const App = () => {
   };
 
   const onChangeSubmit = () => {
+    if (inputNameClient === '') {
+      console.log('vide');
+      return alert('vide name');
+    }
+    if (inputEmailClient === '') {
+      console.log('vide');
+      return alert('vide email');
+    }
+    if (inputMessageClient === '') {
+      console.log('vide');
+      return alert('vide message');
+    }
     setInputNameClient('');
     setInputEmailClient('');
     setInputMessageClient('');
@@ -42,6 +60,8 @@ const App = () => {
        animFinished ? (
          <>
            <Page
+             user={user}
+             changeDataUser={changeDataUser}
              inputNameClient={inputNameClient}
              textInputNameClient={textInputNameClient}
              inputEmailClient={inputEmailClient}

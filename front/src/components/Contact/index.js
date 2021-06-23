@@ -10,7 +10,7 @@ import computer from '../../assets/computer.jpg';
 const Contact = ({
   inputNameClient, textInputNameClient,
   onChangeSubmit, inputEmailClient, textInputEmailClient,
-  inputMessageClient, textInputMessageClient,
+  inputMessageClient, textInputMessageClient, user, changeDataUser,
 }) => (
   <div className="contact">
     <div className="container__contact--left animate">
@@ -31,17 +31,18 @@ const Contact = ({
         <input
           className="contact__input"
           type="text"
-          value={inputNameClient}
+          value={user.name}
           onChange={(evt) => {
-            const textNameClient = evt.target.value;
-            textInputNameClient(textNameClient);
+            const textClient = evt.target.value;
+            const value = 'name';
+            changeDataUser(textClient, value);
           }}
         />
         <p className="contact__text">Votre email</p>
         <input
           className="contact__input"
           type="email"
-          value={inputEmailClient}
+          value={user.email}
           onChange={(evt) => {
             const textEmailClient = evt.target.value;
             textInputEmailClient(textEmailClient);
@@ -51,7 +52,7 @@ const Contact = ({
         <textarea
           className="contact__input textarea"
           type="textarea"
-          value={inputMessageClient}
+          value={user.message}
           onChange={(evt) => {
             const textMessageClient = evt.target.value;
             textInputMessageClient(textMessageClient);
@@ -69,6 +70,8 @@ const Contact = ({
 );
 
 Contact.propTypes = {
+  user: PropTypes.object.isRequired,
+  changeDataUser: PropTypes.func.isRequired,
   inputNameClient: PropTypes.string.isRequired,
   textInputNameClient: PropTypes.func.isRequired,
   inputEmailClient: PropTypes.string.isRequired,

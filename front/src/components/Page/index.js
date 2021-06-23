@@ -23,7 +23,7 @@ import Contact from '../Contact';
 const Page = ({
   inputNameClient, textInputNameClient,
   onChangeSubmit, inputEmailClient, textInputEmailClient,
-  inputMessageClient, textInputMessageClient,
+  inputMessageClient, textInputMessageClient, user, changeDataUser,
 }) => {
   const location = useLocation();
   return (
@@ -51,6 +51,8 @@ const Page = ({
             </Route>
             <Route exact path="/contact">
               <Contact
+                user={user}
+                changeDataUser={changeDataUser}
                 inputNameClient={inputNameClient}
                 textInputNameClient={textInputNameClient}
                 onChangeSubmit={onChangeSubmit}
@@ -69,6 +71,8 @@ const Page = ({
 };
 
 Page.propTypes = {
+  user: PropTypes.object.isRequired,
+  changeDataUser: PropTypes.func.isRequired,
   inputNameClient: PropTypes.string.isRequired,
   textInputNameClient: PropTypes.func.isRequired,
   inputEmailClient: PropTypes.string.isRequired,
