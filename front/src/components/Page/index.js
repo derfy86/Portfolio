@@ -34,7 +34,7 @@ const Page = ({
           key={location.key}
           classNames="fade"
           unmountOnExit
-          timeout={300}
+          timeout={600}
         >
           <Switch location={location}>
             <Route exact path="/">

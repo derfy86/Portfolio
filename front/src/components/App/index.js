@@ -64,5 +64,3 @@ const App = () => {
 
 // == Export
 export default App;
-
-// {/* <img alt="" src={clavier} /> */}

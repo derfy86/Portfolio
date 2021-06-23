@@ -13,7 +13,7 @@ const Contact = ({
   inputMessageClient, textInputMessageClient,
 }) => (
   <div className="contact">
-    <div className="container__contact--left">
+    <div className="container__contact--left animate">
       <img src={computer} alt="" className="container__contact--left__img" />
     </div>
     <div className="container__contact--right">
@@ -49,7 +49,7 @@ const Contact = ({
         />
         <p className="contact__text">Votre méssage</p>
         <textarea
-          className="contact__input"
+          className="contact__input textarea"
           type="textarea"
           value={inputMessageClient}
           onChange={(evt) => {
