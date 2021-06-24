@@ -23,7 +23,7 @@ const FirstPage = () => {
     }, 1300);
     setTimeout(() => {
       setLogoTime(!logoTime);
-    }, 2000);
+    }, 2200);
   }, []);
 
   return (

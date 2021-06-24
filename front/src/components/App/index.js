@@ -6,47 +6,58 @@ import './style.scss';
 import Animation from '../Animation';
 import Page from '../Page';
 
+const axios = require('axios').default;
+
 // == Composant
 const App = () => {
   // init this state at false to see the animation
   const [animFinished, setAnimFinished] = useState(true);
   const [firstAnimationFinished, setFirstAnimationFinished] = useState(false);
-  const [inputNameClient, setInputNameClient] = useState('');
-  const [inputEmailClient, setInputEmailClient] = useState('');
-  const [inputMessageClient, setInputMessageClient] = useState('');
   const [user, setUser] = useState({ name: '', email: '', message: '' });
+  const [errorLine, setErrorLine] = useState({ name: false, email: false, message: false });
+  const [loading, setLoading] = useState(false);
+  const [messageSend, setMessageSend] = useState(false);
 
   const changeDataUser = (text, value) => {
     setUser({ ...user, [value]: text });
-    console.log('infos', user);
   };
 
-  const textInputNameClient = (textClient) => {
-    setInputNameClient(textClient);
+  const deleteErrorLine = () => {
+    setErrorLine({ name: false, email: false, message: false });
   };
-  const textInputEmailClient = (textClient) => {
-    setInputEmailClient(textClient);
+
+  const trySubmit = () => {
+    setLoading(true);
+    axios.post('http://localhost:3000/api/trySendMessage', {
+      userMessage: user,
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          setMessageSend(true);
+          setUser({ name: '', email: '', message: '' });
+        }
+      })
+      .catch((error) => {
+        console.trace(error);
+      })
+      .then(() => {
+        setLoading(false);
+      });
   };
-  const textInputMessageClient = (textClient) => {
-    setInputMessageClient(textClient);
+
+  const checkBeforSubmit = () => {
+    Object.entries(user).forEach((value) => {
+      if (value[1] === '') {
+        setErrorLine({ ...errorLine, [value[0]]: true });
+      }
+    });
+    if ((user.name && user.email && user.message) !== '') {
+      trySubmit();
+    }
   };
 
   const onChangeSubmit = () => {
-    if (inputNameClient === '') {
-      console.log('vide');
-      return alert('vide name');
-    }
-    if (inputEmailClient === '') {
-      console.log('vide');
-      return alert('vide email');
-    }
-    if (inputMessageClient === '') {
-      console.log('vide');
-      return alert('vide message');
-    }
-    setInputNameClient('');
-    setInputEmailClient('');
-    setInputMessageClient('');
+    checkBeforSubmit();
   };
 
   const handelFirstAnim = (videoRef) => {
@@ -62,13 +73,10 @@ const App = () => {
            <Page
              user={user}
              changeDataUser={changeDataUser}
-             inputNameClient={inputNameClient}
-             textInputNameClient={textInputNameClient}
-             inputEmailClient={inputEmailClient}
-             textInputEmailClient={textInputEmailClient}
-             inputMessageClient={inputMessageClient}
-             textInputMessageClient={textInputMessageClient}
              onChangeSubmit={onChangeSubmit}
+             errorLine={errorLine}
+             deleteErrorLine={deleteErrorLine}
+             messageSend={messageSend}
            />
          </>
        ) : (

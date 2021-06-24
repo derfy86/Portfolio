@@ -21,9 +21,12 @@ import Contact from '../Contact';
 
 // == Composant
 const Page = ({
-  inputNameClient, textInputNameClient,
-  onChangeSubmit, inputEmailClient, textInputEmailClient,
-  inputMessageClient, textInputMessageClient, user, changeDataUser,
+  onChangeSubmit,
+  user,
+  changeDataUser,
+  errorLine,
+  deleteErrorLine,
+  messageSend,
 }) => {
   const location = useLocation();
   return (
@@ -53,13 +56,10 @@ const Page = ({
               <Contact
                 user={user}
                 changeDataUser={changeDataUser}
-                inputNameClient={inputNameClient}
-                textInputNameClient={textInputNameClient}
                 onChangeSubmit={onChangeSubmit}
-                inputEmailClient={inputEmailClient}
-                textInputEmailClient={textInputEmailClient}
-                inputMessageClient={inputMessageClient}
-                textInputMessageClient={textInputMessageClient}
+                errorLine={errorLine}
+                deleteErrorLine={deleteErrorLine}
+                messageSend={messageSend}
               />
             </Route>
             <Error />
@@ -73,13 +73,10 @@ const Page = ({
 Page.propTypes = {
   user: PropTypes.object.isRequired,
   changeDataUser: PropTypes.func.isRequired,
-  inputNameClient: PropTypes.string.isRequired,
-  textInputNameClient: PropTypes.func.isRequired,
-  inputEmailClient: PropTypes.string.isRequired,
-  textInputEmailClient: PropTypes.func.isRequired,
-  inputMessageClient: PropTypes.string.isRequired,
-  textInputMessageClient: PropTypes.func.isRequired,
   onChangeSubmit: PropTypes.func.isRequired,
+  errorLine: PropTypes.object.isRequired,
+  deleteErrorLine: PropTypes.func.isRequired,
+  messageSend: PropTypes.bool.isRequired,
 };
 
 // == Export
