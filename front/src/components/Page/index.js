@@ -18,6 +18,7 @@ import Error from '../Error';
 import Skills from '../Skills';
 import Project from '../Project';
 import Contact from '../Contact';
+import Github from '../Github';
 
 // == Composant
 const Page = ({
@@ -27,6 +28,8 @@ const Page = ({
   errorLine,
   deleteErrorLine,
   messageSend,
+  loading,
+  messageWrong,
 }) => {
   const location = useLocation();
   return (
@@ -60,7 +63,12 @@ const Page = ({
                 errorLine={errorLine}
                 deleteErrorLine={deleteErrorLine}
                 messageSend={messageSend}
+                messageWrong={messageWrong}
+                loading={loading}
               />
+            </Route>
+            <Route exact path="/githubAPI">
+              <Github />
             </Route>
             <Error />
           </Switch>
@@ -77,6 +85,8 @@ Page.propTypes = {
   errorLine: PropTypes.object.isRequired,
   deleteErrorLine: PropTypes.func.isRequired,
   messageSend: PropTypes.bool.isRequired,
+  messageWrong: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 // == Export

@@ -17,6 +17,7 @@ const App = () => {
   const [errorLine, setErrorLine] = useState({ name: false, email: false, message: false });
   const [loading, setLoading] = useState(false);
   const [messageSend, setMessageSend] = useState(false);
+  const [messageWrong, setMessageWrong] = useState(false);
 
   const changeDataUser = (text, value) => {
     setUser({ ...user, [value]: text });
@@ -39,6 +40,7 @@ const App = () => {
       })
       .catch((error) => {
         console.trace(error);
+        setMessageWrong(true);
       })
       .then(() => {
         setLoading(false);
@@ -77,6 +79,8 @@ const App = () => {
              errorLine={errorLine}
              deleteErrorLine={deleteErrorLine}
              messageSend={messageSend}
+             messageWrong={messageWrong}
+             loading={loading}
            />
          </>
        ) : (

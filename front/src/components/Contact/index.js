@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 // == Import
 import './style.scss';
+import CircleLoader from 'src/components/CircleLoader';
 import computer from '../../assets/computer.jpg';
 
 // == Composant
@@ -14,6 +15,8 @@ const Contact = ({
   errorLine,
   deleteErrorLine,
   messageSend,
+  messageWrong,
+  loading,
 }) => (
   <div className="contact">
     <div className="container__contact--left animate">
@@ -40,12 +43,12 @@ const Contact = ({
           className="contact__input"
           type="text"
           value={user.name}
-          onFocus={(evt) => {
+          onFocus={() => {
             deleteErrorLine();
           }}
-          onBlur={(evt) => {
-            // onChangeSubmit();
-          }}
+          // onBlur={() => {
+          //   onChangeSubmit();
+          // }}
           onChange={(evt) => {
             const textClient = evt.target.value;
             changeDataUser(textClient, 'name');
@@ -61,7 +64,7 @@ const Contact = ({
           className="contact__input"
           type="email"
           value={user.email}
-          onFocus={(evt) => {
+          onFocus={() => {
             deleteErrorLine();
           }}
           onChange={(evt) => {
@@ -79,7 +82,7 @@ const Contact = ({
           className="contact__input textarea"
           type="textarea"
           value={user.message}
-          onFocus={(evt) => {
+          onFocus={() => {
             deleteErrorLine();
           }}
           onChange={(evt) => {
@@ -88,8 +91,15 @@ const Contact = ({
           }}
         />
         {
-          messageSend ? (
-            <p className="contact__done">Votre message a bien été délivré, vous allez reçevoir un email de confirmation.</p>
+          loading ? (
+            <div className="container--loader">
+              <CircleLoader
+                colour="#7ED8F7"
+                radius={20}
+                duration={2}
+                strokeWidth={6}
+              />
+            </div>
           ) : (
             <button
               type="submit"
@@ -97,7 +107,15 @@ const Contact = ({
             >
               Envoyer
             </button>
-
+          )
+        }
+        {
+          messageSend && (
+            <p className="contact__done">Votre message a bien été délivré, vous allez reçevoir un email de confirmation.</p>
+          )
+        }{
+          messageWrong && (
+            <p className="contact__wrong">Un problème est survenu, merci de réessayer ultérieurement.</p>
           )
         }
       </form>
@@ -112,6 +130,8 @@ Contact.propTypes = {
   errorLine: PropTypes.object.isRequired,
   deleteErrorLine: PropTypes.func.isRequired,
   messageSend: PropTypes.bool.isRequired,
+  messageWrong: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 // == Export

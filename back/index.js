@@ -2,15 +2,19 @@ require('dotenv').config();
 const express = require('express');
 const router = require('./app/router');
 const cors = require('cors')
+const sanitizer = require('./app/middleware/sanitizer')
 
 
 const app = express();
 
-var corsOptions = {
+const corsOptions = {
     origin: 'http://localhost:8080',
     optionsSuccessStatus: 200 
-  }
-app.use(cors(corsOptions))
+  };
+
+app.use(cors(corsOptions));
+
+app.use(sanitizer);
 
 app.use(express.json());
 

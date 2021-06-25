@@ -1,0 +1,14 @@
+  
+.button {
+  display: block;
+  align-self: flex-end;
+  float: right;
+  &-style {
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+    &:hover {
+      color: red;
+    }
+  }
+}

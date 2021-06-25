@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 // == Import
 import './style.scss';
+import cv from '../../assets/CV_BOURIGEAUD_Frédéric.pdf';
 
 // == Composant
 const Header = () => (
@@ -19,6 +20,9 @@ const Header = () => (
       <NavLink to="/project" className="header__text--detail" activeClassName=" active">
         Projet
       </NavLink>
+      <a href={cv} download className="header__text--detail">
+        CV
+      </a>
       <NavLink to="/contact" className="header__text--detail" activeClassName=" active">
         Contact
       </NavLink>

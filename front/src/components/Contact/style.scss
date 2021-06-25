@@ -63,6 +63,19 @@
     text-align: center;
   }
 
+  &__wrong {
+    margin-top: 2rem;
+    width: 80%;
+    display: block;
+    padding: 0.8rem 4rem;
+    border-radius: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    background:rgb(226, 25, 25);
+    border: 1px solid black;
+    text-align: center;
+  }
+
   &__error {
     color: red;
     margin: 0.4rem;
@@ -86,6 +99,10 @@
   padding: 4rem 2rem;
   width: 40%;
   border-radius: 50px;
+}
+
+.container--loader {
+  margin-top: 2rem;
 }
 
 .textarea, .textarea:focus {
