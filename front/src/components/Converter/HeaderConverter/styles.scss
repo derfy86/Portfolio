@@ -1,0 +1,21 @@
+.header--converter {
+  background-color:#bb5432 ;
+  color: #fff;
+  padding: 3rem 0rem;
+  &__title {
+    font-size: 3em;
+    font-weight: bold;
+  }
+  &__input {
+    width: 85px;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: #fff;
+    font-size: 1.3em;
+  }
+  &__amount {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: lighter;
+  }
+}

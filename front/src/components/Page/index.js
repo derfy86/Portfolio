@@ -20,6 +20,7 @@ import Project from '../Project';
 import Contact from '../Contact';
 import Github from '../Github';
 import Todolist from '../Todolist';
+import Converter from '../Converter';
 
 // == Composant
 const Page = ({
@@ -73,6 +74,9 @@ const Page = ({
             </Route>
             <Route exact path="/todolist">
               <Todolist />
+            </Route>
+            <Route exact path="/converter">
+              <Converter />
             </Route>
             <Error />
           </Switch>

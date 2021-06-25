@@ -1,0 +1,13 @@
+.result {
+  background-color: #fff;
+  padding: 1.5rem;
+  color:#bb5432 ;
+  &-number {
+    font-size: 3em;
+    font-weight: bold;
+  }
+  &-country {
+    font-size: 2em;
+    font-weight: lighter;
+  }
+}

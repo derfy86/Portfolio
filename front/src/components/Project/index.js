@@ -25,6 +25,11 @@ const Project = () => (
           Todolist
         </Link>
       </div>
+      <div className="project__container__card">
+        <Link to="/converter">
+          Converter
+        </Link>
+      </div>
     </div>
   </div>
 );

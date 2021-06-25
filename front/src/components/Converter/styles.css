@@ -1,0 +1,13 @@
+.app--converter {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #000000;
+    height: 100vh;
+    padding: 5rem 1rem 1rem 1rem;
+}
+
+.background--converter {
+    background-color: #f1c5b6;
+    padding: 1rem;
+}
