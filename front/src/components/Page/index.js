@@ -19,6 +19,7 @@ import Skills from '../Skills';
 import Project from '../Project';
 import Contact from '../Contact';
 import Github from '../Github';
+import Todolist from '../Todolist';
 
 // == Composant
 const Page = ({
@@ -69,6 +70,9 @@ const Page = ({
             </Route>
             <Route exact path="/githubAPI">
               <Github />
+            </Route>
+            <Route exact path="/todolist">
+              <Todolist />
             </Route>
             <Error />
           </Switch>

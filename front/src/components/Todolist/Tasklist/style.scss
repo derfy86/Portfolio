@@ -1,0 +1,38 @@
+.tache {
+    background-color: #eee;
+    margin: 0.5rem 0;
+    padding: 1.8rem;
+    font-size: 1.2em;
+    border-radius: 9px;
+    font-weight: 600;
+    width: 80%;
+    &-ckecked {
+      background-color:#8DA39B;
+      text-decoration: line-through;
+      margin-top: 0.5rem;
+      padding: 1.8rem;
+      font-size: 1.2em;
+      border-radius: 9px;
+      font-weight: 600;
+      width: 80%;
+    }
+  }
+  
+  .container {
+    width: 60%;
+  }
+  
+  .deleted {
+    float: right;
+    margin-left: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    text-align: center;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .check--task {
+      margin-right: 1rem;
+  }

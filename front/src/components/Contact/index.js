@@ -72,10 +72,10 @@ const Contact = ({
             changeDataUser(textClient, 'email');
           }}
         />
-        <p className="contact__text">Votre méssage</p>
+        <p className="contact__text">Votre mssage</p>
         {
           errorLine.message && (
-            <p className="contact__error">Vous devez renseigner votre méssage</p>
+            <p className="contact__error">Vous devez renseigner votre message</p>
           )
         }
         <textarea
@@ -111,7 +111,7 @@ const Contact = ({
         }
         {
           messageSend && (
-            <p className="contact__done">Votre message a bien été délivré, vous allez reçevoir un email de confirmation.</p>
+            <p className="contact__done">Votre message a bien été délivré, vous allez recevoir un email de confirmation.</p>
           )
         }{
           messageWrong && (

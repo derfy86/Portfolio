@@ -9,9 +9,17 @@
 
   &__container  {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 2rem 15rem;
+    background-color: red;
+
+    &__card {
+      background-color: white;
+      text-align: center;
+      height: 60vh;
+      width: 30%;
+    }
   }
 
   &__title {
