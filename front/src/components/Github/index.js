@@ -42,7 +42,6 @@ const Github = () => {
   };
 
   useEffect(() => {
-    document.title = 'Get my Git!!';
     getDataGit();
   }, [numberByPage]);
 

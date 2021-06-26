@@ -1,11 +1,15 @@
 // == Import npm
 import React, { useEffect, useState } from 'react';
+import {
+  Link,
+} from 'react-router-dom';
 
 // == Import
 import './style.scss';
 import Typical from 'react-typical';
 import github from '../../assets/github.svg';
 import pdf from '../../assets/pdf.svg';
+import email from '../../assets/email.svg';
 import linkedin from '../../assets/linkedin.svg';
 import fred from '../../assets/fred.jpg';
 import cv from '../../assets/CV_BOURIGEAUD_Frédéric.pdf';
@@ -19,7 +23,7 @@ const About = () => {
   useEffect(() => {
     setTimeout(() => {
       setLogoAboutTime(!logoAboutTime);
-    }, 3500);
+    }, 3600);
   }, []);
   return (
     <div className="about">
@@ -36,13 +40,20 @@ const About = () => {
               <div className="container--logo">
                 <a href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-bourigeaud/" className="button--about">
                   <img src={linkedin} alt="lien linkedin" className="logo--about animate" />
+                  <p className="about__member__myself__detail animate">Linkedin</p>
                 </a>
                 <a href="https://github.com/derfy86" className="button--about">
                   <img src={github} alt="lien github" className="logo--about animate" />
+                  <p className="about__member__myself__detail animate">Github</p>
                 </a>
                 <a href={cv} download className="button--about">
                   <img src={pdf} alt="lien téléchargement CV" className="logo--about animate" />
+                  <p className="about__member__myself__detail animate">CV</p>
                 </a>
+                <Link to="/contact" download className="button--about">
+                  <img src={email} alt="lien téléchargement CV" className="logo--about animate" />
+                  <p className="about__member__myself__detail animate">Contact</p>
+                </Link>
               </div>
             )
           }
