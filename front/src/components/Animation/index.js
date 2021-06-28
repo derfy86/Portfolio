@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 // == Import
 import './style.scss';
-import hudVideo from '../../assets/hud.mp4';
+import hudVideo from '../../assets/video/hud.mp4';
 
 // == Composant
 const Animation = ({ firstAnimationFinished, handelFirstAnim }) => {

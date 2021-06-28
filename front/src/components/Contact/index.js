@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 // == Import
 import './style.scss';
-import CircleLoader from 'src/components/CircleLoader';
-import computer from '../../assets/computer.jpg';
+import CircleLoader from '../CircleLoader';
+import computer from '../../assets/pictures/computer.jpg';
 
 // == Composant
 const Contact = ({

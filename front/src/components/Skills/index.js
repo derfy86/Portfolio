@@ -3,26 +3,26 @@ import React from 'react';
 
 // == Import
 import './style.scss';
-import js from '../../assets/js.png';
-import react from '../../assets/react.svg';
-import webpack from '../../assets/webpack.png';
-import html from '../../assets/html.png';
-import css from '../../assets/css.png';
-import redux from '../../assets/redux.png';
-import sass from '../../assets/sass.png';
-import node from '../../assets/node.jpg';
-import express from '../../assets/express.png';
-import postgres from '../../assets/postgres.png';
-import sequelize from '../../assets/sequelize.png';
-import insomnia from '../../assets/insomnia.svg';
-import github from '../../assets/github.svg';
-import axios from '../../assets/axios.jpg';
-import aws from '../../assets/aws.png';
+import js from '../../assets/pictures/js.png';
+import react from '../../assets/pictures/react.svg';
+import webpack from '../../assets/pictures/webpack.png';
+import html from '../../assets/pictures/html.png';
+import css from '../../assets/pictures/css.png';
+import redux from '../../assets/pictures/redux.png';
+import sass from '../../assets/pictures/sass.png';
+import node from '../../assets/pictures/node.jpg';
+import express from '../../assets/pictures/express.png';
+import postgres from '../../assets/pictures/postgres.png';
+import sequelize from '../../assets/pictures/sequelize.png';
+import insomnia from '../../assets/pictures/insomnia.svg';
+import github from '../../assets/pictures/github.svg';
+import axios from '../../assets/pictures/axios.jpg';
+import aws from '../../assets/pictures/aws.png';
 
 // == Composant
 const Skills = () => (
   <div className="skills">
-    <h1 className="skills__title">Mes compétences</h1>
+    <h1 className="skills__title">Pour plus de transparence sur mes compétences</h1>
     <div className="skills__container animate">
       <article className="skills__card">
         <div className="skills__card__background">

@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 // == Import
 import './style.scss';
-import cv from '../../assets/CV_BOURIGEAUD_Frédéric.pdf';
+import cv from '../../assets/pdf/CV_BOURIGEAUD_Frédéric.pdf';
 
 // == Composant
 const Header = () => (

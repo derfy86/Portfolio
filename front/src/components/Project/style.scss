@@ -11,16 +11,23 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 2rem 5rem;
+    padding: 1rem;
 
     &__card {
       border-radius: 10px;
       background-color: rgb(0, 0, 0);
       text-align: center;
-      height: 60vh;
-      width: 350px;
+      min-height: 75vh;
+      width: 500px;
       margin: 1rem 0.5rem;
       border: 2px solid white;
+
+      &__center--text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 40vh;
+      }
 
       &__title {
         color: white;
@@ -30,9 +37,22 @@
       }
 
       &__img {
-        width: 100%;
-        padding: 0 0.5rem;
-        height: 16vh;
+        width: 500px;
+        padding: 0 2rem;
+      }
+
+      &__context {
+        color: white;
+        font-size: 1.1em;
+        padding: 2rem 1.5rem;
+        line-height: 1.2em;
+      }
+
+      &__text {
+        color: white;
+        font-size: 1.1em;
+        padding: 0 2rem 2rem 2rem;
+        line-height: 1.2em;
       }
     }
   }

@@ -4,9 +4,9 @@ import React, { useEffect, useState } from 'react';
 // == Import
 import './style.scss';
 
-import node from '../../assets/node.jpg';
-import js from '../../assets/js.png';
-import react from '../../assets/react.svg';
+import node from '../../assets/pictures/node.jpg';
+import js from '../../assets/pictures/js.png';
+import react from '../../assets/pictures/react.svg';
 
 // == Composant
 const FirstPage = () => {

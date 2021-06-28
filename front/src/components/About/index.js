@@ -7,12 +7,12 @@ import {
 // == Import
 import './style.scss';
 import Typical from 'react-typical';
-import github from '../../assets/github.svg';
-import pdf from '../../assets/pdf.svg';
-import email from '../../assets/email.svg';
-import linkedin from '../../assets/linkedin.svg';
-import fred from '../../assets/fred.jpg';
-import cv from '../../assets/CV_BOURIGEAUD_Frédéric.pdf';
+import github from '../../assets/pictures/github.svg';
+import pdf from '../../assets/pictures/pdf.svg';
+import email from '../../assets/pictures/email.svg';
+import linkedin from '../../assets/pictures/linkedin.svg';
+import fred from '../../assets/pictures/fred.jpg';
+import cv from '../../assets/pdf/CV_BOURIGEAUD_Frédéric.pdf';
 
 // == Composant
 const About = () => {
