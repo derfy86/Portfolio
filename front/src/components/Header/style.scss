@@ -17,6 +17,10 @@
     border-bottom: solid #ffa600d3 1px;
   }
 
+  &__toggle-btn {
+    display: none;
+  }
+
   &__text {
     display: flex;
     &--detail{
@@ -47,3 +51,58 @@
   color: rgb(228, 228, 228);
 }
 
+@media screen and (max-width: 60rem) {
+
+  .header {
+    padding: 1rem;
+    font-size: 0.9em;
+    position: fixed;
+    transition: 1s;
+
+    &__toggle-btn {
+      position: absolute;
+      display: block;
+      z-index: 5;
+      background-color: white;
+      left: 80%;
+      top: 10%;
+      border-radius: 50%;
+      padding: 0.2rem 0.2rem 0 0.2rem;
+      border: none;
+      outline: none;
+    }
+
+    &__text {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(0, 0, 0);
+      border-radius: 10px;
+      padding: 2rem 0 1rem 0;
+      line-height: 1.6rem;
+      left: 60%;
+      top: 15%;
+    }
+  }
+
+  .none {
+    display: none;
+  }
+
+  .open {
+    transform: translateX(-5rem) rotate(45deg);
+    transition: transform 0.5s ease-out 0.3s, visibility 1s;
+  }
+
+  .close {
+    transform: rotate(45deg);
+    transform: translateX(0);
+    transition: transform 0.5s ease-out 0s, visibility 1s;
+  }
+
+  .img__menu__mobile {
+    width: 20px;
+
+  }
+
+}

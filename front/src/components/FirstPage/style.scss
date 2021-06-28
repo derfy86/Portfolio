@@ -62,3 +62,45 @@ animation: smooth-transition 1.4s ease-in-out ;
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 60rem) {
+
+  .first-page {
+    padding-top: 11rem;
+    margin: auto;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.274)),url("/src/assets/pictures/dev.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+  
+    &__name {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      font-size: 2em;
+      width: fit-content;
+    }
+  
+    &__text {
+      width: fit-content;
+      margin: 0.5rem 0 0 1rem;
+      font-size: 1.2em;
+    }
+  }
+
+  .logo {
+    display: flex;
+    width:100%;
+    padding-left: 2rem;
+    margin-top: 3rem;
+    
+    &__detail {
+      width: 60px;
+      height: 60px;
+      margin: 1rem 0.5rem;
+    }
+  }
+
+}

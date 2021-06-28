@@ -32,11 +32,14 @@ const Page = ({
   messageSend,
   loading,
   messageWrong,
+  mobileMenu,
+  toggleMenu,
+  closeMenu,
 }) => {
   const location = useLocation();
   return (
     <main className="">
-      <Header />
+      <Header mobileMenu={mobileMenu} toggleMenu={toggleMenu} closeMenu={closeMenu} />
       <TransitionGroup>
         <CSSTransition
           key={location.key}
@@ -95,6 +98,9 @@ Page.propTypes = {
   messageSend: PropTypes.bool.isRequired,
   messageWrong: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
+  mobileMenu: PropTypes.bool.isRequired,
+  toggleMenu: PropTypes.func.isRequired,
+  closeMenu: PropTypes.func.isRequired,
 };
 
 // == Export

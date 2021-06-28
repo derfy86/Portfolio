@@ -18,6 +18,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [messageSend, setMessageSend] = useState(false);
   const [messageWrong, setMessageWrong] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   const changeDataUser = (text, value) => {
     setUser({ ...user, [value]: text });
@@ -67,6 +68,14 @@ const App = () => {
     videoRef.current.play();
   };
 
+  const toggleMenu = () => {
+    setMobileMenu(!mobileMenu);
+  };
+
+  const closeMenu = () => {
+    setMobileMenu(false);
+  };
+
   return (
     <div className="app">
       {
@@ -81,6 +90,9 @@ const App = () => {
              messageSend={messageSend}
              messageWrong={messageWrong}
              loading={loading}
+             toggleMenu={toggleMenu}
+             mobileMenu={mobileMenu}
+             closeMenu={closeMenu}
            />
          </>
        ) : (
