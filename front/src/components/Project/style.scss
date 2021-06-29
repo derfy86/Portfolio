@@ -66,3 +66,75 @@
     margin-bottom: 1rem;
   }
 }
+
+@media screen and (max-width: 60rem) {
+
+  .project {
+    padding-top: 5rem;
+    background-color: rgb(97, 7, 85);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  
+    &__container  {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding: 1rem;
+  
+      &__card {
+        border-radius: 10px;
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        min-height: 75vh;
+        width: 95%;
+        margin: 1rem 0.5rem;
+        border: 2px solid white;
+  
+        &__center--text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: 40vh;
+        }
+  
+        &__title {
+          color: white;
+          font-size: 1em;
+          font-weight: bold;
+          padding: 1rem;
+        }
+  
+        &__img {
+          width: 300px;
+          padding: 0 2rem;
+        }
+  
+        &__context {
+          color: white;
+          font-size: 1.1em;
+          padding: 1rem 0.5rem;
+          line-height: 1em;
+        }
+  
+        &__text {
+          color: white;
+          font-size: 1.1em;
+          padding: 0 1rem 1rem 1rem;
+          line-height: 1em;
+        }
+      }
+    }
+  
+    &__title {
+      color: white;
+      width: 100%;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+    }
+  }
+  
+}

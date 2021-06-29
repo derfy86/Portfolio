@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 // == Import
 import './style.scss';
 import cv from '../../assets/pdf/CV_BOURIGEAUD_Frédéric.pdf';
-import plus from '../../assets/pictures/plus.svg';
+import plus from '../../assets/pictures/more.png';
 
 // == Composant
 const Header = ({ toggleMenu, mobileMenu, closeMenu }) => {
