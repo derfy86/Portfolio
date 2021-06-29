@@ -15,21 +15,23 @@
   color: rgb(202, 204, 204);
 }
 
-.container-profil {
+.container--full {
   border-radius: 5px;
-  width: 31%;
-  text-align: left;
+  width: 90%;
+  text-align: center;
   background-color: white;
   margin:1.5rem 0rem ;
   box-shadow: -1px 1px 1px  #bdc3c7;
   &-text {
     padding: 1rem;
+    word-wrap: break-word;
   }
 }
 
-.img {
+.img--full {
   border-radius: 5px 5px 0px 0px;
-  width: 100%;
+  width: 50%;
+  padding: 0.5rem
 }
 
 .solo {

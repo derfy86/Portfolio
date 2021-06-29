@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link,
 } from 'react-router-dom';
 
 // == Import
@@ -10,7 +11,7 @@ import Message from './Message';
 import ReposResults from './ReposResults';
 import SearchBar from './SearchBar';
 import FullPost from './FullPost';
-import Logo from './logo-github.png';
+import Logo from '../../assets/pictures/logo-github.png';
 import './github.scss';
 
 const axios = require('axios').default;
@@ -62,8 +63,10 @@ const Github = () => {
   return (
     <div className="github">
       <Router>
-        <div className="container">
-          <img className="logo" src={Logo} alt="logo github" />
+        <div className="container--github">
+          <Link to="/githubAPI">
+            <img className="logo--github" src={Logo} alt="logo acceuil github" />
+          </Link>
           <SearchBar
             value={valueInput}
             valueInputClient={valueInputClient}

@@ -11,3 +11,14 @@
     font-weight: lighter;
   }
 }
+@media screen and (max-width: 60rem) {
+  .result {
+    padding: 1.5rem;
+    &-number {
+      font-size: 1.2em;
+    }
+    &-country {
+      font-size: 1.3em;
+    }
+  }
+}

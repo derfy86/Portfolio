@@ -45,3 +45,20 @@
 .black {
   background-color: rgb(0, 0, 0);
 }
+
+@media screen and (max-width: 60rem) {
+  .main {
+    height: 45vh;
+    font-size: 1em;
+    &-title {
+      width: 100%;
+      text-align: left;
+      padding: 1rem 0.5rem;
+      font-weight: bold;
+      background-color: #fff;
+    }
+    &-list {
+      font-size: 0.8em;
+    }
+  }
+}

@@ -30,19 +30,21 @@ const FullPost = ({
     getRepoGit(orga, repo);
   }, []);
 
+  const link = `https://github.com/${data.full_name}`;
+
   return (
-    <div className="container-profil">
+    <div className="container--full">
       {
         !loading && (
-          <>
-            <img className="img" src={data.owner.avatar_url} alt="profil" />
+          <a href={link} target="new">
+            <img className="img--full" src={data.owner.avatar_url} alt="profil" />
             <div className="container-profil-text">
               <h2 className="h2">{data.name}</h2>
               <h3 className="h3">{data.full_name}</h3>
               <p>{data.description}
               </p>
             </div>
-          </>
+          </a>
         )
       }
     </div>

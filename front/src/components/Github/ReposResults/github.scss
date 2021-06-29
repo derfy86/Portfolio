@@ -8,11 +8,13 @@
 
 .h2 {
   margin-bottom: 0;
+  word-wrap: break-word;
 }
 
 .h3 {
   margin: 0 0 1rem 0;
   color: rgb(202, 204, 204);
+  word-wrap: break-word;
 }
 
 .container-profil {
@@ -40,4 +42,15 @@
 
 .solo {
   width: 100%;
+}
+
+@media screen and (max-width: 60rem) {
+
+  .container-profil {
+    width: 49% !important;
+    &-text {
+      padding: 0.5rem;
+      font-size: 0.6em;
+    }
+  }
 }

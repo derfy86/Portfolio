@@ -1,14 +1,29 @@
-  
 .button {
   display: block;
   align-self: flex-end;
   float: right;
+
   &-style {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     transition: 0.3s;
+    margin: 0 2rem 1rem 2rem ;
+    padding: 1rem;
     &:hover {
       color: red;
+      background-color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 60rem) {
+  .button {
+    &-style {
+      background-color: white;
+      border-radius: 15px;
+      transition: 0.3s;
+      margin: 0 2rem 1rem 2rem ;
+      padding: 0.5rem;
     }
   }
 }

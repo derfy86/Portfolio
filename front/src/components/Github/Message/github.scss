@@ -9,3 +9,9 @@
   text-align: left;
   box-shadow: -1px 1px 1px  #bdc3c7;
 }
+
+@media screen and (max-width: 60rem) {
+  .container-message {
+    font-size: 0.8em;
+  }
+}

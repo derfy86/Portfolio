@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 const TaskList = ({ tasks, calculate, deleteTask }) => (
-  <div className="container">
+  <div className="container--todo">
     {
       tasks.map((task) => (
         <div key={task.id} className={task.done ? 'tache-ckecked' : 'tache'}>

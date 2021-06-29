@@ -11,3 +11,11 @@
     background-color: #f1c5b6;
     padding: 1rem;
 }
+
+@media screen and (max-width: 60rem) {
+
+    .app--converter {
+        width: 100%;
+        padding: 4rem 1rem 1rem 1rem;
+    }
+}
