@@ -6,3 +6,4 @@ video/
 Thumbs.db
 
 yarn-error.log
+.env

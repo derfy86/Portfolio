@@ -80,7 +80,7 @@
       padding: 2rem 0 1rem 0;
       line-height: 1.6rem;
       left: 60%;
-      top: 15%;
+      top: 10%;
     }
   }
 
@@ -89,7 +89,7 @@
   }
 
   .open {
-    transform: translateX(-5rem) rotate(45deg);
+    transform: translateX(-250%) rotate(45deg);
     transition: transform 0.5s ease-out 0.3s, visibility 1s;
   }
 

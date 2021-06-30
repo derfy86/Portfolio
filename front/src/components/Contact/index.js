@@ -29,7 +29,7 @@ const Contact = ({
         className="contact__form"
         onSubmit={(evt) => {
           evt.preventDefault();
-          onChangeSubmit();
+          onChangeSubmit(evt.target);
         }}
       >
         <h1 className="contact__title">Contatez-moi</h1>
@@ -40,6 +40,8 @@ const Contact = ({
           )
         }
         <input
+          id="name"
+          name="name"
           className="contact__input"
           type="text"
           value={user.name}
@@ -61,6 +63,8 @@ const Contact = ({
           )
         }
         <input
+          id="email"
+          name="email"
           className="contact__input"
           type="email"
           value={user.email}
@@ -72,13 +76,15 @@ const Contact = ({
             changeDataUser(textClient, 'email');
           }}
         />
-        <p className="contact__text">Votre mssage</p>
+        <p className="contact__text">Votre message</p>
         {
           errorLine.message && (
             <p className="contact__error">Vous devez renseigner votre message</p>
           )
         }
         <textarea
+          id="message"
+          name="message"
           className="contact__input textarea"
           type="textarea"
           value={user.message}

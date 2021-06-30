@@ -25,6 +25,10 @@
         font-size: 1.2em;
         padding: 1rem 5rem 2rem 1rem;
         line-height: 2rem;
+
+        &--mobile {
+          display: none;
+        }
       }
 
       &__detail {
@@ -101,11 +105,16 @@
         }
   
         &__text {
-          color: white;
-          width: 100%;
-          font-size: 1em;
-          padding: 1rem 1rem 2rem 1rem;
-          line-height: 2rem;
+          display: none;
+
+          &--mobile {
+            display: block;
+            color: white;
+            width: 100%;
+            font-size: 1em;
+            padding: 1rem 1rem 2rem 1rem;
+            line-height: 2rem;
+          }
         }
   
         &__detail {
@@ -120,6 +129,7 @@
           height: 200px;
           border-radius: 50%;
           padding: 5px;
+          margin-bottom: 2rem;
         }
       }
     }

@@ -14,17 +14,49 @@ import linkedin from '../../assets/pictures/linkedin.svg';
 import fred from '../../assets/pictures/fred.jpg';
 import cv from '../../assets/pdf/CV_BOURIGEAUD_Frédéric.pdf';
 
+export function useWindowDimensions() {
+  const hasWindow = typeof window !== 'undefined';
+
+  function getWindowDimensions() {
+    const width = hasWindow ? window.innerWidth : null;
+    return {
+      width,
+    };
+  }
+
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    if (hasWindow) {
+      const handleResize = () => {
+        setWindowDimensions(getWindowDimensions());
+      };
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, [hasWindow]);
+
+  return windowDimensions;
+}
+
 // == Composant
 const About = () => {
   const steps = [500, 'Frédéric BOURIGEAUD, alias Derfy, développeur web et web mobile fullstack Javascript. Riche de mes diverses expériences, je mets mon adaptabilité au service du client. Vous avez une application à réaliser en React, ou bien encore le besoin d\'une base de données sécurisé? Discutons-en. '];
 
   const [logoAboutTime, setLogoAboutTime] = useState(false);
 
+  const { width } = useWindowDimensions();
+
   useEffect(() => {
+    if (width < 960) {
+      setLogoAboutTime(true);
+    }
     setTimeout(() => {
-      setLogoAboutTime(!logoAboutTime);
+      setLogoAboutTime(true);
     }, 3600);
   }, []);
+
   return (
     <div className="about">
       <article className="about__member">
@@ -35,6 +67,7 @@ const About = () => {
             className="about__member__myself__text"
             wrapper="p"
           />
+          <p className="about__member__myself__text--mobile">Frédéric BOURIGEAUD, alias Derfy, développeur web et web mobile fullstack Javascript. Riche de mes diverses expériences, je mets mon adaptabilité au service du client. Vous avez une application à réaliser en React, ou bien encore le besoin d\'une base de données sécurisé? Discutons-en.</p>
           {
             logoAboutTime && (
               <div className="container--logo">

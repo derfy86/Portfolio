@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 
 // == Import
+import emailjs from 'emailjs-com';
 import './style.scss';
 import Animation from '../Animation';
 import Page from '../Page';
@@ -28,39 +29,50 @@ const App = () => {
     setErrorLine({ name: false, email: false, message: false });
   };
 
-  const trySubmit = () => {
+  const trySubmit = (Infos) => {
     setLoading(true);
-    axios.post('http://localhost:3000/api/trySendMessage', {
-      userMessage: user,
-    })
-      .then((response) => {
-        if (response.status === 200) {
-          setMessageSend(true);
-          setUser({ name: '', email: '', message: '' });
-        }
-      })
-      .catch((error) => {
-        console.trace(error);
+    // axios.post('http://localhost:3000/api/trySendMessage', {
+    //   userMessage: user,
+    // })
+    //   .then((response) => {
+    //     if (response.status === 200) {
+    //       setMessageSend(true);
+    //       setUser({ name: '', email: '', message: '' });
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.trace(error);
+    //     setMessageWrong(true);
+    //   })
+    //   .then(() => {
+    //     setLoading(false);
+    //   });
+    emailjs.sendForm('Derfy', 'template_7wcmnyt', Infos, 'user_OJzYvw9DOSs4v0FDwIWvi')
+      .then((result) => {
+        console.log(result.text);
+        setMessageSend(true);
+        setUser({ name: '', email: '', message: '' });
+        setLoading(false);
+      }, (error) => {
+        console.log(error.text);
         setMessageWrong(true);
-      })
-      .then(() => {
         setLoading(false);
       });
   };
 
-  const checkBeforSubmit = () => {
+  const checkBeforSubmit = (Infos) => {
     Object.entries(user).forEach((value) => {
       if (value[1] === '') {
         setErrorLine({ ...errorLine, [value[0]]: true });
       }
     });
     if ((user.name && user.email && user.message) !== '') {
-      trySubmit();
+      trySubmit(Infos);
     }
   };
 
-  const onChangeSubmit = () => {
-    checkBeforSubmit();
+  const onChangeSubmit = (Infos) => {
+    checkBeforSubmit(Infos);
   };
 
   const handelFirstAnim = (videoRef) => {
