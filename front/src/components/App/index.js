@@ -5,9 +5,10 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import './style.scss';
 import Animation from '../Animation';
+import Error from '../Error';
 import Page from '../Page';
 
-const axios = require('axios').default;
+// const axios = require('axios').default;
 
 // == Composant
 const App = () => {
@@ -108,10 +109,11 @@ const App = () => {
            />
          </>
        ) : (
-         <Animation
-           firstAnimationFinished={firstAnimationFinished}
-           handelFirstAnim={handelFirstAnim}
-         />
+         <Error />
+       //  <Animation
+       //    firstAnimationFinished={firstAnimationFinished}
+       //    handelFirstAnim={handelFirstAnim}
+       //  />
        )
       }
     </div>

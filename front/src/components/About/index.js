@@ -12,7 +12,7 @@ import pdf from '../../assets/pictures/pdf.svg';
 import email from '../../assets/pictures/email.svg';
 import linkedin from '../../assets/pictures/linkedin.svg';
 import fred from '../../assets/pictures/fred.jpg';
-import cv from '../../assets/pdf/CV_BOURIGEAUD_Frédéric.pdf';
+import cv from '../../assets/cv-bourigeaud.pdf';
 
 export function useWindowDimensions() {
   const hasWindow = typeof window !== 'undefined';
@@ -67,7 +67,7 @@ const About = () => {
             className="about__member__myself__text"
             wrapper="p"
           />
-          <p className="about__member__myself__text--mobile">Frédéric BOURIGEAUD, alias Derfy, développeur web et web mobile fullstack Javascript. Riche de mes diverses expériences, je mets mon adaptabilité au service du client. Vous avez une application à réaliser en React, ou bien encore le besoin d\'une base de données sécurisé? Discutons-en.</p>
+          <p className="about__member__myself__text--mobile">Frédéric BOURIGEAUD, alias Derfy, développeur web et web mobile fullstack Javascript. Riche de mes diverses expériences, je mets mon adaptabilité au service du client. Vous avez une application à réaliser en React, ou bien encore le besoin d\'une base de données sécurisée? Discutons-en.</p>
           {
             logoAboutTime && (
               <div className="container--logo">
@@ -79,7 +79,7 @@ const About = () => {
                   <img src={github} alt="lien github" className="logo--about animate" />
                   <p className="about__member__myself__detail animate">Github</p>
                 </a>
-                <a href={cv} download className="button--about">
+                <a href="https://drive.google.com/file/d/1AeOx-cxowQ_3HWTYM1fC1mrpf_9whP4z/view?usp=sharing" target="new" className="button--about">
                   <img src={pdf} alt="lien téléchargement CV" className="logo--about animate" />
                   <p className="about__member__myself__detail animate">CV</p>
                 </a>

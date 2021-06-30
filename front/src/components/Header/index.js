@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 // == Import
 import './style.scss';
-import cv from '../../assets/pdf/CV_BOURIGEAUD_Frédéric.pdf';
+import cv from '../../assets/cv-bourigeaud.pdf';
 import plus from '../../assets/pictures/more.png';
 
 // == Composant
@@ -33,7 +33,7 @@ const Header = ({ toggleMenu, mobileMenu, closeMenu }) => {
         <NavLink to="/project" className="header__text--detail" activeClassName=" active" onClick={closeMenu}>
           Projet
         </NavLink>
-        <a href={cv} download className="header__text--detail" onClick={closeMenu}>
+        <a href="https://drive.google.com/file/d/1AeOx-cxowQ_3HWTYM1fC1mrpf_9whP4z/view?usp=sharing" target="new" className="header__text--detail" onClick={closeMenu}>
           CV
         </a>
         <NavLink to="/contact" className="header__text--detail" activeClassName=" active" onClick={closeMenu}>
