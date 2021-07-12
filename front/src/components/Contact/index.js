@@ -32,7 +32,7 @@ const Contact = ({
           onChangeSubmit(evt.target);
         }}
       >
-        <h1 className="contact__title">Contatez-moi</h1>
+        <h1 className="contact__title">Contactez-moi</h1>
         <p className="contact__text">Votre nom</p>
         {
           errorLine.name && (

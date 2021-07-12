@@ -42,7 +42,7 @@ export function useWindowDimensions() {
 
 // == Composant
 const About = () => {
-  const steps = [500, 'Frédéric BOURIGEAUD, alias Derfy, développeur web et web mobile fullstack Javascript. Riche de mes diverses expériences, je mets mon adaptabilité au service du client. Vous avez une application à réaliser en React, ou bien encore le besoin d\'une base de données sécurisé? Discutons-en. '];
+  const steps = [500, 'Frédéric BOURIGEAUD, alias Derfy, développeur web et web mobile fullstack Javascript. Riche de mes diverses expériences, je mets mon adaptabilité au service du client. Vous avez une application à réaliser en React, ou bien encore besoin d\'une base de données sécurisée? Discutons-en. '];
 
   const [logoAboutTime, setLogoAboutTime] = useState(false);
 
@@ -67,15 +67,15 @@ const About = () => {
             className="about__member__myself__text"
             wrapper="p"
           />
-          <p className="about__member__myself__text--mobile">Frédéric BOURIGEAUD, alias Derfy, développeur web et web mobile fullstack Javascript. Riche de mes diverses expériences, je mets mon adaptabilité au service du client. Vous avez une application à réaliser en React, ou bien encore le besoin d\'une base de données sécurisée? Discutons-en.</p>
+          <p className="about__member__myself__text--mobile">Frédéric BOURIGEAUD, alias Derfy, développeur web et web mobile fullstack Javascript. Riche de mes diverses expériences, je mets mon adaptabilité au service du client. Vous avez une application à réaliser en React, ou bien encore besoin d'une base de données sécurisée? Discutons-en.</p>
           {
             logoAboutTime && (
               <div className="container--logo">
-                <a href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-bourigeaud/" className="button--about">
+                <a href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-bourigeaud/" target="new" className="button--about">
                   <img src={linkedin} alt="lien linkedin" className="logo--about animate" />
                   <p className="about__member__myself__detail animate">Linkedin</p>
                 </a>
-                <a href="https://github.com/derfy86" className="button--about">
+                <a href="https://github.com/derfy86" target="new" className="button--about">
                   <img src={github} alt="lien github" className="logo--about animate" />
                   <p className="about__member__myself__detail animate">Github</p>
                 </a>
