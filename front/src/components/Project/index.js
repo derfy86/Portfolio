@@ -14,7 +14,7 @@ const Project = () => (
   <div className="project">
     <h1 className="project__title">Vous trouverez ici quelques projets que j'ai pu réaliser seul ou en collaboration.</h1>
     <div className="project__container animate">
-      <a target="new" href="http://ec2-15-188-14-79.eu-west-3.compute.amazonaws.com/">
+      <a target="new" href="https://cod-access-demo.fr/">
         <div className="project__container__card">
           <h2 className="project__container__card__title">Cod'access</h2>
           <img className="project__container__card__img" src={cod} alt="" />

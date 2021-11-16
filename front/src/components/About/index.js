@@ -42,6 +42,8 @@ export function useWindowDimensions() {
 
 // == Composant
 const About = () => {
+  // eslint-disable-next-line max-len
+  // Don't forget to change async function perform speed by 10 in front/node_modules/react-typical/dist/index.es.js
   const steps = [500, 'Frédéric BOURIGEAUD, alias Derfy, développeur web et web mobile fullstack Javascript. Riche de mes diverses expériences, je mets mon adaptabilité au service du client. Vous avez une application à réaliser en React, ou bien encore besoin d\'une base de données sécurisée? Discutons-en. '];
 
   const [logoAboutTime, setLogoAboutTime] = useState(false);
